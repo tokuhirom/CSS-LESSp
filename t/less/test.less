@@ -1,0 +1,131 @@
+
+#header {
+  color: black;
+
+  .navigation {
+    font-size: 12px;
+  }
+  .logo {
+    width: 300px;
+    :hover { text-decoration: none }
+  }
+}
+
+#footer {
+	#header .navigation;
+}
+
+@reni:ivan;
+@rali:@reni;
+
+.h1 {
+	border: @rali;
+}
+
+@nice-blue: #5B83AD;
+
+@light-blue: @nice-blue + #111;
+
+#header { color: @light-blue; }
+
+.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+
+#menu a {
+  color: #111;
+  .bordered;
+}
+
+.post a {
+  color: red;
+  .bordered;
+}
+
+
+@var:test;
+@namespace foo "http://example.com/ns/foo";
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace foo "http://example.com/ns/foo";
+
+@font-face {
+  font-family: "Example Font";
+  src: url("http://www.example.com/fonts/example");
+} // asdfasdfasdf
+
+//asdfasdfas
+/* testaset */
+
+h1 {
+  font-family: "Example Font", sans-serif;
+  @test:test;  
+}
+
+foo|bar {
+	border: @var;
+}
+
+/*This is a comment*/
+p
+{
+text-align:center;
+/*This is another comment*/
+color:black;
+font-family:arial
+}
+
+@font-face {
+     font-family: dreamy;
+     font-weight: bold;
+     src: url(http://www.example.com/font.eot);
+     }
+
+@media print, screen
+   {
+   blockquote { 
+		font-size: 16pt;
+		jackson {
+			margin: 1px solid red;
+		}
+	}
+}
+
+input[type="text"] {background-color:blue}
+
+button:hover {
+
+}
+
+
+@namespace askdjfaskjdf;
+
+.kamen{
+border: 0px;
+@var: json;
+.plamen {display: 12px; .joro { json: 15px; ivan:@var }; mama: mia; }  // fasdfasf ]
+margin: 0px; }
+
+.ivan { 
+	filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1,test=2);	
+	.gosho {display: 12px; #milen { json: 15px; ivan:@var }; mama: mia; }  // fasdfasf ]
+}
+
+@multiplier: 5;
+
+.joro { 
+	momo: petr; 
+	jason: iskam; 
+	@kamen:json;
+	mengeme: (((44-22+43px)/25)*@multiplier)+54 px;
+	color: @multiplier * #fff;
+	background-color: #3f3f3f + #f3f + print 'test';
+	background-color: #ccc * 4;
+}
+
+.gosho {
+	momo: 15+45px;
+	.kamen .plamen;
+}
+
+

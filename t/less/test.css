@@ -1,0 +1,135 @@
+#header .navigation { 
+	font-size: 12px;
+}
+
+#header .logo:hover { 
+	text-decoration: none;
+}
+
+#header .logo { 
+	width: 300px;
+}
+
+#header { 
+	color: black;
+}
+
+#footer { 
+	font-size: 12px;
+}
+
+.h1 { 
+	border: ivan;
+}
+
+#header { 
+	color: #6c94be;
+}
+
+.bordered { 
+	border-top: dotted 1px black;
+	border-bottom: solid 2px black;
+}
+
+#menu a { 
+	color: #111;
+	border-top: dotted 1px black;
+	border-bottom: solid 2px black;
+}
+
+.post a { 
+	color: red;
+	border-top: dotted 1px black;
+	border-bottom: solid 2px black;
+}
+
+@font-face { 
+	font-family: "Example Font";
+	src: url("http: //www.example.com/fonts/example");
+}
+
+h1 { 
+	font-family: "Example Font", sans-serif;
+}
+
+foo|bar { 
+	border: test;
+}
+
+p { 
+	text-align: center;
+	color: black;
+	font-family: arial;
+}
+
+@font-face { 
+	font-family: dreamy;
+	font-weight: bold;
+	src: url(http: //www.example.com/font.eot);
+}
+
+@media print, screen { 
+	blockquote { 
+		jackson { 
+			margin: 1px solid red;
+		}
+
+		font-size: 16pt;
+	}
+
+}
+
+input[type="text"] { 
+	background-color: blue;
+}
+
+button:hover { 
+}
+
+@namespace askdjfaskjdf;
+
+.kamen .plamen .joro { 
+	json: 15px;
+	ivan: json;
+}
+
+.kamen .plamen { 
+	display: 12px;
+	mama: mia;
+}
+
+.kamen { 
+	border: 0px;
+	margin: 0px;
+}
+
+.ivan .gosho #milen { 
+	json: 15px;
+	ivan: test;
+}
+
+.ivan .gosho { 
+	display: 12px;
+	mama: mia;
+}
+
+.ivan { 
+	filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1,test=2);
+}
+
+.joro { 
+	momo: petr;
+	jason: iskam;
+	mengeme: 67px;
+	color: #ffffff;
+	background-color: #3f3f3f + #ff33ff + print 'test';
+	background-color: #333333;
+}
+
+.gosho { 
+	momo: 60px;
+	display: 12px;
+	mama: mia;
+}
+
+

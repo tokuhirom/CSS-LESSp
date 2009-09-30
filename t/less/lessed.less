@@ -1,0 +1,47 @@
+﻿
+@nice-blue: #5B83AD;
+@light-blue: @nice-blue + #111;
+
+#header { color: @light-blue; }
+
+.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+
+#menu a {
+  color: #111;
+  .bordered;
+}
+
+.post a {
+  color: red;
+  .bordered;
+}
+
+#header {
+  color: black;
+
+  .navigation {
+    font-size: 12px;
+  }
+  .logo {
+    width: 300px;
+    :hover { text-decoration: none }
+  }
+}
+
+#ivan {
+	#header > .logo > :hover;
+}
+
+@base: 5%;
+@filler: @base * 2;
+@other: @base + @filler;
+
+input {
+	color: #888 / 4;
+	background-color: @base-color + #111;
+	height: 100% / 2 + @filler;
+	background-color: #header['color'];
+}
