@@ -3,7 +3,7 @@ package CSS::LESSp;
 use warnings;
 use strict;
 
-our $VERSION = '0.01';
+our $VERSION = '0.03';
 
 sub parse {
 	my $self = shift;
@@ -67,11 +67,11 @@ sub parse {
 						$value =~ s/\@$word/$var/;
 					}
 					# expression (+,-,*,/)
-					if ( $value =~ /(\d+)\s*(px|pt|em|%)*\s*(\+|\-|\*|\/)\s*((\d+)\s*(px|pt|em|%)*|\d+)/ ) {						
+					if ( $value =~ /(\d+)\s*(px|pt|em|%)*\s*(\+|\*|\/)\s*((\d+)\s*(px|pt|em|%)*|\d+)/ or $value =~ /(\d+)\s*(px|pt|em|%)*\s*(\-)\s+((\d+)\s*(px|pt|em|%)*|\d+)/ ) {
 						my $eval = $value;
 						my $removed = $1 if $eval =~ s/(px|pt|em|%)//g;
 						if ( $eval !~ /[a-z]/i and $eval = eval($eval) ) {
-							$eval .= "$removed" if $eval;							
+							$eval .= "$removed" if $eval and $removed;							
 							$value = $eval;
 						};
 					}
@@ -196,14 +196,31 @@ CSS::LESSp - LESS for perl. Parse .less files and returns valid css (lesscss.org
 =head1 SYNOPSIS
 
   use CSS::LESSp;
-  
-  my $css = CSS::LESSp->parse($file);
+
+  my $buffer;
+  open(IN, "file.less");
+  for ( <IN> ) { $buffer .= $_ };
+  close(IN);
+ 
+  my @css = CSS::LESSp->parse($buffer);
+
+  print join("", @css);
 
 =head1 DESCRIPTION
 
 This module is designed to parse and compile .less files in to .css files.
 
 About the documentation and syntax of less files please visit lesscss.org 
+
+=head1 METHODS
+
+=over 1
+
+=item parse
+
+Main parse method, returns array of css file
+
+=back
 
 =head1 BUGS
 
@@ -216,7 +233,7 @@ You can't do this
   }
 
   .comment {
-    width: #defaults[@width];
+	width: #defaults[@width];
   }
 
 All other bugs should be reported via
